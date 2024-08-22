@@ -16,10 +16,11 @@ runs:
       run: |
           echo "::group::test group"
           echo "testing"
-          echo "::endgroup::"
           exit 1
+          echo "::endgroup::"
       shell: bash
     - name: Set Greeting
+      # if: always()
       run: echo "Hello $INPUT_WHO_TO_GREET."
       shell: bash
       env:
